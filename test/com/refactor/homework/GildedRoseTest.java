@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class GildedRoseTest {
 
@@ -157,7 +158,7 @@ public class GildedRoseTest {
     @Test
     public void should_return_50_given_a_Backstage_Passes_item_its_sellIn_is_15_quality_is_50() throws Exception {
         Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 15, 50);
-        GildedRose gildedRose = new GildedRose(Arrays.asList(item));
+        GildedRose gildedRose = new GildedRose(Collections.singletonList(item));
 
         gildedRose.updateQuality();
 
